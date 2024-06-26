@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Header from "./components/Header";
+import ProfessionalObjective from "./components/ProfessionalObjective"; // Check this import statement
+import WorkExperience from "./components/WorkExperience";
+import Education from "./components/Education";
+import Skills from "./components/Skills";
+import Courses from "./components/Courses";
+import Languages from "./components/Languages";
+import AdditionalInformation from "./components/AdditionalInformation";
+import Projects from "./components/Projects";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <Header />
+      <main>
+        <ProfessionalObjective /> {/* Ensure the component name matches */}
+        <WorkExperience />
+        <Education />
+        <Skills />
+        <Courses />
+        <Languages />
+        <AdditionalInformation />
+        <Projects />
+      </main>
+      <footer>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          &copy; {new Date().getFullYear()} Roman Sosnovskyi. All rights
+          reserved.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </footer>
     </div>
   );
 }

@@ -1,38 +1,104 @@
-.App {
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #313b47; /* Dark background color */
+  color: #151515; /* White text color */
+}
+
+header {
+  background-color: #313b47; /* Dark background color for header */
+  color: #ffffff; /* White text color for header */
+  padding: 20px;
   text-align: center;
+  border-bottom: 5px solid #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+header p {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+/* Update link color */
+a {
+  color: #4a90e2; /* Blue color for links */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Ensure main content area has white background */
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: 80px auto 20px; /* Adjusted margin to account for the header and footer */
+  background-color: #ffffff; /* White background for main content */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure section headings have appropriate styling */
+section h2 {
+  font-size: 1.8em;
+  color: #4a90e2; /* Blue color for section headings */
+  border-bottom: 2px solid #4a90e2; /* Blue border bottom for section headings */
+  padding-bottom: 5px;
+}
+
+/* Update footer styles */
+footer {
+  background-color: #313b47; /* Dark background color for footer */
+  color: #ffffff; /* White text color for footer */
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+.profile-image {
+  width: 200px; /* Adjust size as needed */
+  height: 200px; /* Adjust size as needed */
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image fills the container without stretching */
+  border: 2px solid #fff; /* Example border */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Example shadow */
+}
+
+@media (max-width: 1024px) {
+  .container {
+    margin: 0;
+    max-width: unset;
+    box-shadow: none;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 830px) {
+  .division-main-date {
+    border: 0;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (min-width: 1024px) {
+  .work-skills ul {
+    max-height: 120px;
+  }
+}
+
+@media print {
+  .work-skills ul {
+    max-height: 120px;
+    flex-direction: column;
   }
 }
